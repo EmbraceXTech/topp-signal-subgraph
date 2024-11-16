@@ -4,10 +4,9 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --studio topp-signal",
-    "create-local": "graph create --node http://localhost:8020/ topp-signal-subgraph",
-    "remove-local": "graph remove --node http://localhost:8020/ topp-signal-subgraph",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 topp-signal-subgraph",
+    "create": "graph create --node https://graph-admin.embracex.tech topp-signal-subgraph",
+    "remove": "graph remove --node https://graph-admin.embracex.tech topp-signal-subgraph",
+    "deploy": "graph deploy --node https://graph-admin.embracex.tech topp-signal-subgraph",
     "test": "graph test"
   },
   "dependencies": {

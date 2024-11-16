@@ -4,7 +4,7 @@ schema:
 dataSources:
   - kind: ethereum
     name: KUBToppSignalPool
-    network: bkc_testnet
+    network: mainnet
     source:
       address: "0x30C74263D3e8c655285ecd18b574417C6399b83C"
       abi: KUBToppSignalPool
@@ -32,9 +32,9 @@ dataSources:
 
   - kind: ethereum/contract
     name: SignalTicketERC1155
-    network: bkc_testnet
+    network: mainnet
     source:
-      address: "0x077de55B147F9E7e60b0B0D2f566923ECE3f045b"
+      address: "0x2d991888F6Ba7478A72A8FD210434291eF97b738"
       abi: SignalTicketERC1155
       startBlock: 19768814
     mapping:
