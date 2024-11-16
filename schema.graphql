@@ -1,0 +1,49 @@
+type Bid @entity {
+  id: ID!
+  time: BigInt!
+  price: BigInt!
+  bidder: Bidder!
+  priceSlot: PriceSlot!
+  amount: BigInt!
+  status: String!
+}
+
+# TODO: deprecated later when user entity is fully complete
+type Bidder @entity {
+  id: ID!
+  bids: [Bid!]! @derivedFrom(field: "bidder")
+}
+
+type PriceSlot @entity {
+  id: ID!
+  time: BigInt!
+  price: BigInt!
+  totalAmount: BigInt! 
+  bids: [Bid!]! @derivedFrom(field: "priceSlot")
+}
+
+type User @entity {
+  id: ID!
+  accounts: [Account!]! @derivedFrom(field: "user")
+}
+
+type Ticket @entity {
+  id: ID!
+  time: BigInt!
+  price: BigInt!
+  accounts: [Account!]! @derivedFrom(field: "ticket")
+}
+
+type Account @entity {
+  id: ID!
+  user: User!
+  ticket: Ticket!
+  balance: BigInt!
+}
+
+type Token @entity {
+  id: ID!
+  name: String!
+  symbol: String!
+  decimals: Int!
+}

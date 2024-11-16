@@ -1,0 +1,8 @@
+{
+  "bkc_testnet": {
+    "Contract": {
+      "address": "0x30C74263D3e8c655285ecd18b574417C6399b83C",
+      "startBlock": 19768814
+    }
+  }
+}
